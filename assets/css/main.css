@@ -2527,7 +2527,6 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 20px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #585858;
 		color: #000000 !important;
 		cursor: pointer;
 		display: inline-block;
@@ -2537,12 +2536,14 @@ input, select, textarea {
 		letter-spacing: 0.35em;
 		line-height: 3.45em;
 		overflow: hidden;
-		padding: 0 0.75em 0 1em;
+		padding: 0 2em 0 2em;
 		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
 		white-space: nowrap;
+		border: 1px;
+		border-color: #000000;
 	}
 
 		input[type="submit"].icon:before,
