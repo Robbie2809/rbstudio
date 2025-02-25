@@ -2899,9 +2899,13 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		padding: 8em 0 0.1em 0 ;
+
+	.header {
 		width:75%;
+	}
+
+	#header {
+		padding: 8em 0 0.1em 0 ;		
 	}
 
 		#header .logo {
