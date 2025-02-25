@@ -2919,6 +2919,7 @@ input, select, textarea {
 				#header .logo .symbol img {
 					display: block;
 					height: 2em;
+					width: 5em;
 				}
 
 		#header nav {
