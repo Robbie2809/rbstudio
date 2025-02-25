@@ -123,6 +123,13 @@ mark {
 }
 
 
+.inter-<uniquifier> {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
