@@ -3403,3 +3403,25 @@ input, select, textarea {
     height: auto;
     display: block;
 }
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
