@@ -3455,3 +3455,27 @@ input, select, textarea {
     max-width: 100%;
   }
 }
+
+/* Swiper Container */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Images */
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+}
+
+/* Pagination Active Bullet */
+.swiper-pagination-bullet-active {
+    background: #007bff;
+}
