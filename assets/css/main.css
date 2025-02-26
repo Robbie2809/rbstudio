@@ -3422,16 +3422,6 @@ input, select, textarea {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-.header {
-  text-align: center;
-  padding: 32px;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
