@@ -193,6 +193,10 @@ input, select, textarea {
 		line-height: 1.75;
 	}
 
+	.p {
+		font-size: 1.1875rem;
+	}
+
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
