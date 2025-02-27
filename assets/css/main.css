@@ -188,7 +188,9 @@ input, select, textarea {
 /*hero*/
 
 	section.hero {
-		height: 90vh;
+		height: 75vh;
+		padding: 7.5em 5em 5em 2em;
+		background-color: #F1ECE8;
 	}
 
 /* Type */
@@ -251,6 +253,7 @@ input, select, textarea {
 		font-weight: 300;
 		line-height: 1.1;
 		font-family: Bricolage+Grotesque;
+		color: #292929;
 	}
 
 		h1 a {
@@ -2915,7 +2918,7 @@ input, select, textarea {
 	}
 
 	#header {
-		padding: 2em 0 0em 0 ;		
+		padding: 2em 2em 0em 2em ;		
 	}
 
 		#header .logo {
