@@ -199,7 +199,7 @@ input, select, textarea {
 	}
 
 	section.full-width-image {
-		background-image: url('../images/blackbg.webp'); /* Replace with your image path */
+		background-image: url('images/blackbg.webp'); /* Replace with your image path */
     		background-size: contain; /* Ensures the whole image is visible */
     		background-repeat: no-repeat;
     		background-position: bottom center; /* Positions image at the bottom */
