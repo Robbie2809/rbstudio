@@ -198,6 +198,9 @@ input, select, textarea {
 		background-color: #292929;
 	}
 
+		
+		
+
 	
 
 /* Type */
@@ -3437,6 +3440,7 @@ input, select, textarea {
     width: 100%;
     height: auto;
     display: block;
+    padding: 0 2em 0 2em;
 }
 
 * {
