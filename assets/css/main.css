@@ -3456,7 +3456,7 @@ input, select, textarea {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 2em;
   background-color: #292929;
 }
 
