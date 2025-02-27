@@ -3421,7 +3421,7 @@ input, select, textarea {
 .full-width-image {
     width: 100%;
     overflow: hidden;
-    padding: 0 2em 0 2em;
+    padding: 0 2em;
 }
 
 .full-width-image img {
