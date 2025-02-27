@@ -185,6 +185,12 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+/*hero*/
+
+	.hero {
+		height: 90vh;
+	}
+
 /* Type */
 
 	body, input, select, textarea {
