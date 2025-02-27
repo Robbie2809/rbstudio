@@ -184,6 +184,7 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+/*Section*/
 
 /*hero*/
 
@@ -192,6 +193,12 @@ input, select, textarea {
 		padding: 7.5em 5em 5em 2em;
 		background-color: #F1ECE8;
 	}
+
+	section.info {
+		background-color: #292929;
+	}
+
+	
 
 /* Type */
 
