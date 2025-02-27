@@ -192,6 +192,10 @@ input, select, textarea {
 		height: 75vh;
 		padding: 7.5em 5em 5em 2em;
 		background-color: #F1ECE8;
+		background-image: url('../images/vector1.svg'); /* Replace with your image path */
+    		background-size: contain; /* Ensures the whole image is visible */
+    		background-repeat: no-repeat;
+    		background-position: bottom center; /* Positions image at the bottom */
 	}
 
 	section.info {
