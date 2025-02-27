@@ -3457,6 +3457,7 @@ input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  background-color: #292929;
 }
 
 /* Create four equal columns that sits next to each other */
