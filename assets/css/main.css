@@ -3559,4 +3559,5 @@ div.desc {
  .but-text {
 	 font-size: 1.25em;
 	 font-weight: 300;
+	 text-decoration: underline;
  }
