@@ -255,9 +255,10 @@ input, select, textarea {
 	}
 
 	p {
-		font: seriff;
-		font-size: 1.1875rem;
+		font: "inter"; seriff;
+		font-size: 2em;
 		font-color: #333;
+		font-weight: 200;
 	}
 
 	h1 {
