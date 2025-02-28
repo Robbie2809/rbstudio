@@ -3458,7 +3458,7 @@ input, select, textarea {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 4em 4em;
+  padding: 2em 0em;
   background-color: #292929;
 }
 
@@ -3466,6 +3466,8 @@ input, select, textarea {
 .column {
   flex: 50%;
   max-width: 50%;
+  display: grid;
+  row-gap: 2em;	
 }
 
 .column img {
