@@ -3556,6 +3556,12 @@ div.desc {
 	background-color: #ffffff;
 }
 
+.image-card1 {
+	width: 100%;
+	min-height: 30vh;
+	background-color: #ffffff;
+}
+
 .info-p {
 	width: 40%;
     	margin: 2em 0 0 auto;
