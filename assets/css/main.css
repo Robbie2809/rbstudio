@@ -3537,8 +3537,9 @@ div.desc {
 }
 
 .image-card {
-	width: 100%:
+	width: 100%;
 	min-height: 40vh;
+	background-color: #ffffff;
 }
 
 .info-p {
