@@ -189,7 +189,7 @@ input, select, textarea {
 /*hero*/
 
 	section.hero {
-		height: 75vh;
+		min-height: 75vh;
 		padding: 7.5em 5em 5em 4em;
 		background-color: #F1ECE8;
 		background-image: url('../images/vector1.svg'); /* Replace with your image path */
@@ -3548,4 +3548,8 @@ div.desc {
 	
 .highlight {
 	color: #C0ED9F;
+}
+
+.hero-button {
+	display: flex;
 }
