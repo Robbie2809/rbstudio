@@ -3554,7 +3554,7 @@ div.desc {
 .hero-button {
 	display: flex;
 	margin-top: 2em;
-	align-items: bottom;
+	align-items: center;
 }
 
  .but-text {
