@@ -3475,6 +3475,19 @@ input, select, textarea {
   vertical-align: middle;
 }
 
+/* Create three equal columns that sit next to each other */
+.column2 {
+  flex: 33.33%; /* Adjusted for 3 columns */
+  max-width: 33.33%; /* Adjusted for 3 columns */
+  display: grid;
+  row-gap: 2em;
+}
+
+.column2 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
   .column {
