@@ -3554,3 +3554,8 @@ div.desc {
 	display: flex;
 	margin-top: 2em;
 }
+
+ .but-text {
+	 font-size: 1.25em;
+	 font-weight: 300;
+ }
