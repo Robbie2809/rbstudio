@@ -3599,5 +3599,8 @@ div.desc {
 }
 
 .hero-button-con {
-	background-color: #000000;
+	background-color: #dcdcdc;
+	padding: 1em;
+    	display: inline-block;
+    	border-radius: 1em;
 }
