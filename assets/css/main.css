@@ -3587,3 +3587,9 @@ div.desc {
 	 font-weight: 300;
 	 text-decoration: underline;
  }
+
+.contact-sec {
+	padding: 5em 5em;
+	background-color: #C0ED9F;
+	margin: auto;
+}
