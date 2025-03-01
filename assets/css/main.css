@@ -3566,6 +3566,11 @@ div.desc {
 	width: 40%;
     	margin: 2em 0 0 auto;
 }
+
+.info-p1 {
+	width: 40%;
+    	margin: 2em 0 0 0;
+}
 	
 .highlight {
 	color: #C0ED9F;
