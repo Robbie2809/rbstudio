@@ -9,14 +9,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0e0e0e;
-      --bg2: #141414;
-      --bg3: #1a1a1a;
-      --text: #f0ede8;
-      --muted: #888;
-      --pink: #e8196e;
-      --green: #b5f04e;
-      --border: #2a2a2a;
+      --bg:#111512; --bg2:#17251b; --bg3:#1c2b20; --text:#f8f5e9; --muted:#a5a58f; --pink:#effc66; --green:#effc66; --border:#354236; --cream:#fdf9e9; --olive:#66664c; --forest:#385d3b; --deep-green:#0d331c;
     }
 
     body {
@@ -129,66 +122,32 @@
       font-weight: 600;
     }
 
-    /* ─── WORK GRID ─── */
-    .work-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-      padding: 0 40px 60px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .work-card {
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--bg3);
-      aspect-ratio: 4/3;
-      position: relative;
-    }
-
-    .work-card:first-child {
-      grid-column: span 1;
-      grid-row: span 2;
-      aspect-ratio: unset;
-    }
-
-    .work-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* placeholder cards with gradient */
-    .card-placeholder {
-      width: 100%;
-      height: 100%;
-      min-height: 180px;
-    }
-    .card-p1 { background: linear-gradient(135deg, #1e2a1e 0%, #2d3d2a 100%); }
-    .card-p2 { background: linear-gradient(135deg, #1c2236 0%, #2a3050 100%); }
-    .card-p3 { background: linear-gradient(135deg, #2a1e1e 0%, #3d2a2a 100%); }
-    .card-p4 { background: linear-gradient(135deg, #1e1e2a 0%, #2a2a3d 100%); }
-
-    /* mock UI inside card */
-    .card-ui {
-      padding: 20px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .card-ui-bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.12); }
-    .card-ui-bar.short { width: 40%; }
-    .card-ui-bar.medium { width: 65%; }
-    .card-ui-bar.full { width: 90%; }
-    .card-ui-block {
-      flex: 1;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.06);
-      margin-top: 8px;
-    }
+    /* ─── SERVICE INTRO CARDS ─── */
+    .work-section{max-width:1240px;margin:0 auto;padding:28px 40px 72px}
+    .work-heading{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;margin-bottom:42px}
+    .work-kicker{display:flex;align-items:center;gap:14px;color:var(--green);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+    .work-kicker:before{content:"";width:42px;height:4px;background:var(--green);display:inline-block}
+    .work-heading h2{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-.035em;max-width:720px}
+    .work-heading h2 span{color:var(--green)}
+    .work-intro{border-left:1px solid var(--border);padding-left:28px;color:var(--muted);font-size:16px;line-height:1.65;max-width:390px;margin-bottom:4px}
+    .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .work-card{min-height:300px;aspect-ratio:1.9/1;border-radius:20px;overflow:hidden;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3vw,38px);color:var(--text);transition:transform .25s ease,box-shadow .25s ease}
+    .work-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+    .work-card:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+    .work-card.cream{background:var(--cream);color:#102719}.work-card.forest{background:var(--forest);color:var(--cream)}.work-card.olive{background:var(--olive);color:var(--cream)}.work-card.deep{background:var(--deep-green);color:var(--cream)}
+    .card-topline{position:relative;z-index:2;display:flex;align-items:center;gap:14px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .card-topline:after{content:"";height:1px;background:currentColor;opacity:.42;flex:1;max-width:190px}
+    .card-copy{position:relative;z-index:2;max-width:76%}
+    .card-copy h3{font-family:'Syne',sans-serif;font-size:clamp(25px,3vw,40px);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin-bottom:14px}
+    .card-copy p{max-width:360px;font-size:14px;line-height:1.5;opacity:.86;margin-bottom:20px}
+    .card-link{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.045em;text-transform:uppercase}
+    .card-link span{font-size:22px;line-height:1;transition:transform .2s ease}.work-card:hover .card-link span{transform:translateX(5px)}
+    .card-mark{position:absolute;z-index:1;width:58%;right:-9%;bottom:-28%;pointer-events:none;line-height:0}
+    .card-mark svg{display:block;width:100%;height:auto;fill:currentColor}
+    .cream .card-mark{color:var(--olive);opacity:.95;width:54%;right:-7%;bottom:-28%}
+    .forest .card-mark{color:#9aaa79;opacity:.34;width:62%;right:-10%;bottom:-33%}
+    .olive .card-mark{color:var(--green);opacity:1;width:66%;right:-8%;bottom:-39%}
+    .deep .card-mark{color:var(--green);opacity:1;width:68%;right:-12%;bottom:-40%}
 
     /* ─── TAGLINE SECTION ─── */
     .tagline-section {
@@ -457,7 +416,7 @@
       .cta-section { padding: 80px 20px; }
       footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
     }
-  </style>
+    @media(max-width:520px){.work-grid{grid-template-columns:1fr}.work-card{min-height:250px;aspect-ratio:1.65/1}.card-copy{max-width:78%}.card-copy h3{font-size:29px}}\n  </style>
 </head>
 <body>
 
@@ -466,7 +425,7 @@
     <img src="images/logo.png" alt="RB Media" style="height: 40px; width: auto;" />
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#work">Our Work</a></li>
+      <li><a href="#work">What I Do</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#process">How I Work</a></li>
     </ul>
@@ -481,45 +440,16 @@
     <p class="hero-sub">And the right support to bring them to life. Whether you need a new website, help with your branding, or someone to take care of the digital side of your business, I can help.</p>
   </section>
 
-  <!-- WORK GRID -->
-  <div class="work-grid" id="work">
-    <div class="work-card">
-      <div class="card-placeholder card-p1">
-        <div class="card-ui">
-          <div class="card-ui-bar short"></div>
-          <div class="card-ui-bar medium"></div>
-          <div class="card-ui-block"></div>
-          <div class="card-ui-bar full"></div>
-          <div class="card-ui-bar medium"></div>
-        </div>
-      </div>
+  <!-- SERVICE INTRO CARDS -->
+  <section class="work-section" id="work" aria-labelledby="work-title">
+    <div class="work-heading"><div><p class="work-kicker">A few ways I can help</p><h2 id="work-title">Practical solutions for <span>your business.</span></h2></div><p class="work-intro">From design to websites and beyond, I can help you find the right solution without the jargon.</p></div>
+    <div class="work-grid">
+      <a class="work-card cream" href="#service-branding"><div class="card-topline">01 / Design</div><div class="card-copy"><h3>Give your brand its look.</h3><p>Identity, design and the materials that bring it all together.</p><span class="card-link">Branding &amp; Design <span aria-hidden="true">→</span></span></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></a>
+      <a class="work-card forest" href="#service-websites"><div class="card-topline">02 / Web</div><div class="card-copy"><h3>Make your website work harder.</h3><p>New sites, improvements and ongoing support.</p><span class="card-link">Websites &amp; Digital <span aria-hidden="true">→</span></span></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></a>
+      <a class="work-card olive" href="#service-ecommerce"><div class="card-topline">03 / E-commerce</div><div class="card-copy"><h3>Take your business online.</h3><p>Online shops, product catalogues and payment setup.</p><span class="card-link">E-commerce <span aria-hidden="true">→</span></span></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></a>
+      <a class="work-card deep" href="#service-support"><div class="card-topline">04 / Support</div><div class="card-copy"><h3>Keep things running smoothly.</h3><p>Maintenance, email marketing and ongoing digital help.</p><span class="card-link">Digital Support <span aria-hidden="true">→</span></span></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></a>
     </div>
-    <div class="work-card">
-      <div class="card-placeholder card-p2">
-        <div class="card-ui">
-          <div class="card-ui-bar medium"></div>
-          <div class="card-ui-block"></div>
-        </div>
-      </div>
-    </div>
-    <div class="work-card">
-      <div class="card-placeholder card-p3">
-        <div class="card-ui">
-          <div class="card-ui-bar short"></div>
-          <div class="card-ui-block"></div>
-        </div>
-      </div>
-    </div>
-    <div class="work-card">
-      <div class="card-placeholder card-p4">
-        <div class="card-ui">
-          <div class="card-ui-bar full"></div>
-          <div class="card-ui-block"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  </section>
   <div class="pink-divider"></div>
 
   <!-- TAGLINE -->
