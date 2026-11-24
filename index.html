@@ -264,89 +264,18 @@
     }
 
     /* ─── REASONS ─── */
-    .reasons-section {
-      padding: 80px 40px;
-      text-align: center;
-    }
-
-    .reasons-section h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      margin-bottom: 48px;
-    }
-
-    .reasons-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .reason-card {
-      background: var(--bg3);
-      border-radius: 16px;
-      padding: 32px;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .reason-card .reason-icon {
-      font-size: 36px;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .reason-card h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .reason-card p {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    /* decorative shapes in reason cards */
-    .reason-card .shape {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      width: 80px;
-      height: 80px;
-      opacity: 0.9;
-    }
-
-    .shape-orange {
-      background: #f07a30;
-      border-radius: 50% 0 50% 50%;
-      transform: rotate(-20deg);
-    }
-
-    .shape-green {
-      background: var(--green);
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
-    .shape-pink {
-      background: var(--pink);
-      border-radius: 50% 50% 0 50%;
-      transform: rotate(15deg);
-    }
-
-    .shape-yellow {
-      background: #f5d800;
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    }
-
+    .reasons-section{padding:80px 40px;text-align:center}
+    .reasons-section h2{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;margin-bottom:48px}
+    .reasons-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1240px;margin:0 auto;text-align:left}
+    .reason-card{min-height:270px;aspect-ratio:1.9/1;border-radius:20px;overflow:hidden;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3vw,38px);transition:transform .25s ease,box-shadow .25s ease}
+    .reason-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+    .reason-card.cream{background:var(--cream);color:#102719}.reason-card.forest{background:var(--forest);color:var(--cream)}.reason-card.olive{background:var(--olive);color:var(--cream)}.reason-card.deep{background:var(--deep-green);color:var(--cream)}
+    .reason-card .card-copy{max-width:78%}.reason-card .card-copy h3{font-size:clamp(22px,2.6vw,32px)}.reason-card .card-copy p{max-width:390px}
+    .reason-card .card-mark{width:54%;right:-8%;bottom:-30%}
+    .reason-card.forest .card-mark{width:60%;right:-11%;bottom:-34%;opacity:.28;color:#a8b78a}
+    .reason-card.olive .card-mark{width:65%;right:-9%;bottom:-40%}
+    .reason-card.deep .card-mark{width:62%;right:-10%;bottom:-37%;opacity:.9}
+    
     /* ─── CTA ─── */
     .cta-section {
       padding: 100px 40px;
@@ -412,11 +341,11 @@
       .service-item { grid-template-columns: 1fr; gap: 16px; }
       .process-section { padding: 60px 20px; }
       .process-step { grid-template-columns: 1fr; }
-      .reasons-section { padding: 60px 20px; }
+      .reasons-section { padding: 60px 20px; }\n      .reasons-grid { grid-template-columns: 1fr 1fr; gap: 12px; }\n      .reason-card { min-height: 260px; aspect-ratio: 1/1.08; padding: 22px; }\n      .reason-card .card-copy { max-width: 100%; }\n      .reason-card .card-copy h3 { font-size: clamp(21px,3vw,28px); }\n      .reason-card .card-copy p { font-size: 13px; }
       .cta-section { padding: 80px 20px; }
       footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
     }
-    @media(max-width:520px){.work-grid{grid-template-columns:1fr}.work-card{min-height:250px;aspect-ratio:1.65/1}.card-copy{max-width:78%}.card-copy h3{font-size:29px}}\n  </style>
+    @media(max-width:520px){.work-grid,.reasons-grid{grid-template-columns:1fr}.work-card,.reason-card{min-height:250px;aspect-ratio:1.65/1}.card-copy,.reason-card .card-copy{max-width:78%}.card-copy h3,.reason-card .card-copy h3{font-size:29px}}\n  </style>
 </head>
 <body>
 
@@ -537,10 +466,10 @@
   <section class="reasons-section">
     <h2>Good work. Clear communication.<br>No unnecessary fuss.</h2>
     <div class="reasons-grid">
-      <div class="reason-card"><div><span class="reason-icon">✦</span><h3>You deal directly with me.</h3><p>From the first conversation to the final handover, you'll know who's working on your project.</p></div><div class="shape shape-orange"></div></div>
-      <div class="reason-card"><div><span class="reason-icon">▲</span><h3>I take time to understand.</h3><p>I'd rather ask a few questions upfront than rush into something that doesn't solve the problem.</p></div><div class="shape shape-green"></div></div>
-      <div class="reason-card"><div><span class="reason-icon">◆</span><h3>The solution needs to make sense.</h3><p>Not every project needs the most complicated or expensive option. I'll recommend an approach that fits.</p></div><div class="shape shape-pink"></div></div>
-      <div class="reason-card"><div><span class="reason-icon">★</span><h3>I'm here after the project too.</h3><p>If you need a change, an update or a hand with something later on, you don't have to start looking for someone new.</p></div><div class="shape shape-yellow"></div></div>
+      <article class="reason-card cream"><div class="card-topline">01 / Direct contact</div><div class="card-copy"><h3>You deal directly with me.</h3><p>From the first conversation to the final handover, you'll know who's working on your project.</p></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></article>
+      <article class="reason-card forest"><div class="card-topline">02 / Understanding</div><div class="card-copy"><h3>I take time to understand.</h3><p>I'd rather ask a few questions upfront than rush into something that doesn't solve the problem.</p></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></article>
+      <article class="reason-card olive"><div class="card-topline">03 / Practical thinking</div><div class="card-copy"><h3>The solution needs to make sense.</h3><p>Not every project needs the most complicated or expensive option. I'll recommend an approach that fits.</p></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></article>
+      <article class="reason-card deep"><div class="card-topline">04 / Ongoing support</div><div class="card-copy"><h3>I'm here after the project too.</h3><p>If you need a change, an update or a hand with something later on, you don't have to start looking for someone new.</p></div><span class="card-mark" aria-hidden="true"><svg viewBox="0 0 387 294" focusable="false"><path fill-rule="evenodd" d="M24 0 L24 58 L33 59 L51 65 L54 65 L99 82 L117 91 L143 108 L140 109 L135 107 L124 106 L123 105 L91 105 L90 106 L82 106 L81 107 L64 109 L47 114 L32 121 L23 127 L12 138 L4 152 L0 166 L0 190 L2 200 L9 217 L15 226 L25 237 L38 247 L59 258 L72 263 L95 269 L113 271 L114 272 L142 273 L143 274 L187 273 L188 272 L200 272 L201 271 L209 271 L210 270 L230 268 L247 264 L253 261 L257 277 L258 293 L339 293 L336 276 L325 243 L319 229 L338 212 L362 186 L379 161 L386 148 L386 145 L309 90 L309 99 L306 108 L285 146 L274 160 L244 130 L225 114 L211 104 L178 87 L134 70 L135 69 L331 69 L331 0 Z M78 170 L82 158 L91 149 L98 145 L106 142 L126 138 L156 138 L176 143 L196 154 L213 170 L221 181 L226 192 L215 197 L190 202 L169 203 L168 204 L129 203 L108 198 L94 191 L83 181 Z"/></svg></span></article>
     </div>
   </section>
 
